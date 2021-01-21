@@ -29,3 +29,5 @@
 	{
 		die($e->getMessage());
 	}
+
+	phpinfo();
