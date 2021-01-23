@@ -37,3 +37,12 @@ dba:
     - mysql
   env_file:
     - docker.env
+composer:
+  build: "./composer"
+  container_name: "composer"
+  volumes:
+    - ./../www:/app
+  command: >
+    bash -c "composer update
+    && composer install
+    && composer dump-autoload"
